@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Problem 1}
+
+~
+
+\subsection*{Question a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &B\coloneqq \text{blue balls}\\
+        &R\coloneqq \text{red balls}\\
+        \Rightarrow&\Omega =\{(B,R),(B,B),(R,B),(R,R)\}
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        P&=P(B,R)+P(R,B)\\
+        &=\frac{n}{2n}\times\frac{n}{2n-1}+\frac{n}{2n}\times\frac{n}{2n-1}\\
+        &=\frac{2n^2}{2n(2n-1)}\\
+        &=\frac{n}{2n-1}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &p_n=1-P\\
+        \Rightarrow&p_n=1-\frac{n}{2n-1}=\frac{n-1}{2n-1}\\
+        &\lim_{n\rightarrow\infty}p_n=\frac{1}{2}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Problem 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &A_1\coloneqq \text{person 1 lost all}\\
+        &A_2\coloneqq \text{person 2 lost all}\\
+        &A_3\coloneqq \text{person 3 lost all}\\
+        &P(A_1)=P(A_2)=P(A_3)=(\frac{2}{3})^4\\
+        &\text{the lost of two people is the win of the third}:\\
+        &P(A_1\cap A_2)=P(A_1\cap A_3)=P(A_2\cap A_3)=(\frac{1}{3})^4\\
+        &P(A_1\cap A_2\cap A_3)=0\text{ since there must be a winner}\\
+        &P(A_1\cup A_2\cup A_3)=P(A_1)+P(A_2)+P(A_3)-P(A_1\cap A_2)-P(A_1\cap A_3)-P(A_2\cap A_3)+P(A_1\cap A_2\cap A_3)\\
+        \Rightarrow&P(A_1\cup A_2\cup A_3)=3\cdot(\frac{2}{3})^4-3\cdot(\frac{1}{3})^4=\frac{16}{27}-\frac{1}{27}=\frac{5}{9}
+    \end{split}
+\end{equation*}
+\end{document}

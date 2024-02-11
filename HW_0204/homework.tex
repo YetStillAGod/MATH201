@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Question 1}
+
+Consider the chess board row-wise: for the first row, there are 8 possible places for the rook, for the second row, there are 7, etc..So there are $8!$ possible ways to meet the condition. There are $\binom{64}{8}$ possible ways to put 8 rooks on the board. So the possibility is \[\frac{8!}{\binom{64}{8}}\]
+
+\section*{Question 2}
+
+If there exists a uniform probability measure such that can choose positive integer at random, the possibility for every positive integer should be the same. However, there are infinitely many integers, meaning that the possibility for each integer to be picked is $\frac{1}{\infty}=0$. This cannot form a probability measure, so we cannot define a uniform probability measure to choose a positive integer at random.
+\end{document}
