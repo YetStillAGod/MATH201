@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        P(FB|Y)=&\frac{P(FB\cap Y)}{P(Y)}\\
+        P(FB\cap Y)=&\frac{4}{10}\times\frac{1}{2}\\
+        =&\frac{1}{5}\\
+        P(Y)=&\frac{4}{10}\times\frac{1}{2}+\frac{4}{7}\times\frac{1}{2}\\
+        =&\frac{17}{35}\\
+        P(FB|Y)=&\frac{\frac{1}{5}}{\frac{17}{35}}\\
+        =&\frac{7}{17}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        P=&\frac{\frac{4}{10}\times\frac{1}{2}\times\frac{4}{10}}{\frac{4}{7}\times\frac{1}{2}\times\frac{4}{7}}\\
+        =&\frac{\frac{2}{25}}{\frac{2}{25}+\frac{8}{49}}\\
+        =&\frac{49}{149}\\
+        &\frac{49}{149}<\frac{7}{17}\\
+        \Rightarrow&\text{less likely}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\{A\}=\text{DNA matches}\\
+        &\{B\}=\text{Guilty}\\
+        P(B|A)=&\frac{P(A\cap B)}{P(A)}\\
+        =&\frac{P(A|B)P(B)}{P(A|B)P(B)+P(A|B^\complement)P(B^\complement)}\\
+        =&\frac{\frac{9999}{10000}\times\frac{1}{100000}}{\frac{9999}{10000}\times\frac{1}{100000}+\frac{1}{10000}\times\frac{99999}{100000}}\\
+        =&\frac{1111}{12222}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        P(B|A)=&\frac{P(A\cap B)}{P(A)}\\
+        =&\frac{P(A|B)P(B)}{P(A|B)P(B)+P(A|B^\complement)P(B^\complement)}\\
+        =&\frac{\frac{49999}{50000}\times\frac{1}{100000}}{\frac{49999}{50000}\times\frac{1}{100000}+\frac{1}{50000}\times\frac{99999}{100000}}\\
+        =&\frac{49999}{149998}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Old}:\\
+        P(B|A)=&\frac{P(A\cap B)}{P(A)}\\
+        =&\frac{P(A|B)P(B)}{P(A|B)P(B)+P(A|B^\complement)P(B^\complement)}\\
+        =&\frac{\frac{9999}{10000}\times\frac{1}{1000}}{\frac{9999}{10000}\times\frac{1}{1000}+\frac{1}{10000}\times\frac{999}{1000}}\\
+        =&\frac{1111}{1222}\\
+        &\text{New}:\\
+        P(B|A)=&\frac{P(A\cap B)}{P(A)}\\
+        =&\frac{P(A|B)P(B)}{P(A|B)P(B)+P(A|B^\complement)P(B^\complement)}\\
+        =&\frac{\frac{49999}{50000}\times\frac{1}{1000}}{\frac{49999}{50000}\times\frac{1}{1000}+\frac{1}{50000}\times\frac{999}{1000}}\\
+        =&\frac{49999}{50998}\\
+    \end{split}
+\end{equation*}
+\end{document}
