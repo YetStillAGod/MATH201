@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Problem 1}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &P(X=k)=(1-p)^{k-1}\cdot p\\
+        &P(X=n+k|X>n)=\frac{P(X=n+k\cap X>n)}{P(X>n)}\\
+        &P(X=n+k|X>n)=\frac{(1-p)^{n+k-1}\cdot p}{(1-p)^n}\\
+        &P(X=n+k|X>n)=(1-p)^{k-1}\cdot p=P(X=k)\\
+        \Rightarrow&P(X=n+k|X>n)=P(X=k),\forall n,k\geqslant 1\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+~
+
+\section*{Problem 2}
+
+~
+
+\subsection*{Question a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &p_k=P(Heads)p_{k+1}+P(Tails)p_{k-1}\\
+        &p_k=\frac{1}{2}p_{k+1}+\frac{1}{2}p_{k-1}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        b_1=&p_1-p_0\\
+        =&\frac{1}{2}p_2+\frac{1}{2}p_0-p_0\\
+        =&\frac{1}{2}p_2-\frac{1}{2}p_0\\
+        =&\frac{1}{2}p_2-\frac{1}{2}\\
+        b_2=&p_2-p_1\\
+        =&p_2-(\frac{1}{2}p_2+\frac{1}{2}p_0)\\
+        =&\frac{1}{2}p_2-\frac{1}{2}\\
+        \Rightarrow&b_1=b_2\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        b_k=&p_k-p_{k-1}\\
+        =&p_k-(\frac{1}{2}p_k+\frac{1}{2}p_{k-2})\\
+        =&\frac{1}{2}p_k-\frac{1}{2}p_{k-2}\\
+        b_{k}=&p_{k-1}-p_{k-2}\\
+        =&\frac{1}{2}p_k+\frac{1}{2}p_{k-2}-p_{k-2}\\
+        =&\frac{1}{2}p_k-\frac{1}{2}p_{k-2}\\
+        \Rightarrow&b_k=b_{k-1}\\
+        \Rightarrow&b_k=b_{k-1}=...=b_1\leftarrow\text{By induction}\\
+        \Rightarrow&b_k=b_1,\forall k\in (0,N]\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question d}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &b_k=b_1\\
+        \Rightarrow&\sum_{i=1}^{k}b_i=k\cdot b_1\\
+        &b_k=p_k-p_{k-1}\\
+        \Rightarrow&\sum_{i=1}^{k}b_i=\sum_{i=1}^{k}p_k-p_{k-1}=p_k-p_0\\
+        \Rightarrow&k\cdot b_1=p_k-p_0\\
+        \Rightarrow&p_k=k\cdot b_1+p_0\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question e}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &p_k=k\cdot b_1+p_0\\
+        &p_N=N\cdot b_1+p_0=0\\
+        \Rightarrow&N=-\frac{p_0}{b_1}=-\frac{1}{b_1}\\
+        \Rightarrow&p_k=k\cdot b_1+p_0\\
+        \Rightarrow&p_k=-\frac{k}{N}+1\\
+    \end{split}
+\end{equation*}
+
+\end{document}
