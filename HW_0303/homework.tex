@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+\section*{Question 1}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        E[x]=&\sum_{x}xP(X=x)\\
+        =&P(X=1)+2P(X=2)+...\\
+        =&(P(X=1)+P(X=2)+...)+(P(X=2)+P(X=3)+...)+...\\
+        =&P(X\geqslant 1)+P(X\geqslant 2)+...\\
+        =&\sum_{k=1}^{\infty}P(X\geqslant k)\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &p=\frac{1}{3}\\
+        &E[X]=\sum_{k=1}^{\infty}P(X\geqslant k)\\
+        &P(X\geqslant k)=1-P(x<k)=1-\sum_{i=0}^{k-1}P(X=i)=(1-p)^{k-1}\\
+        &E[X]=\sum_{k=1}^{\infty}P(X\geqslant k)=\sum_{k=1}^{\infty}(1-p)^{k-1}\\
+        &=\sum_{k=1}^{\infty}(1-\frac{1}{3})^{k-1}=\frac{1}{1-(1-\frac{1}{3})}=3\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+            &f(x)=\frac{d}{dx}P(X\leqslant x)=\frac{1}{60}\\
+            P&=P(X\in [5,10])+P(X\in [15,20])+P(X\in [25,30])\\
+            &+P(X\in [35,40])+P(X\in [45,50])+P(X\in [55,60])\\
+            &=\int_{5}^{10}\frac{1}{60}dx+\int_{15}^{20}\frac{1}{60}dx+\int_{25}^{30}\frac{1}{60}dx\\
+            &+\int_{35}^{40}\frac{1}{60}dx+\int_{45}^{50}\frac{1}{60}dx+\int_{55}^{60}\frac{1}{60}dx\\
+            &=\frac{1}{12}\times6\\
+            &=\frac{1}{2}\\
+    \end{split}
+\end{equation*}
+\end{document}
