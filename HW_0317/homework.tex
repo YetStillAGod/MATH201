@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+\section*{Question 1}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    P=\binom{n}{k}p^k(1-p)^{n-k}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Even}:\\
+        &S_n=0\\
+        \Rightarrow&k=n-k\\
+        \Rightarrow&n=2k\\
+        \Rightarrow&P(S_n=0)=\binom{2k}{k}p^k(1-p)^k\\
+        &\\
+        &\text{Odd}:\\
+        &\text{With one step at a time, it cannot return to origin after odd steps}\\
+        \Rightarrow&P(S_n=0)=0\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &E(S)=80\cdot0.45=36\\
+        &\sigma=\sqrt{np(1-p)}=\sqrt{80\cdot0.45\cdot(1-0.45)}\\
+        \Rightarrow&P(S_{80}=0)=P(S=40)=P(39.5<S<40.5)\\
+        \Rightarrow&P(S_{80}=0)=P(S<40.5)-P(S<39.5)\\
+        \Rightarrow&P(S_{80}=0)=P[Z<\frac{40.5-36}{\sigma}]-P[Z<\frac{39.5-36}{\sigma}]\\
+        \approx&P[Z<1.0113]-P[Z<0.7866]\\
+        =& 0.8438 - 0.7823\\
+        =&0.0615\\
+        \Rightarrow&P(S_{80}=0)\approx0.0615\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &2\Phi(2\varepsilon\sqrt{n})-1\geqslant0.95\\
+        \Rightarrow&\Phi(2\times0.02\sqrt{n})\geqslant0.975\\
+        &0.04\sqrt{n}\geqslant1.96\\
+        &\sqrt{n}\geqslant49\\
+        \Rightarrow&n\geqslant2401\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &P(S_n=5050)=\Phi(\frac{5000+\frac{1}{2}-10000\times0.51}{\sqrt{2499}})-\Phi(\frac{5000-\frac{1}{2}-10000\times0.51}{\sqrt{2499}})\\
+        \Rightarrow&P(S_n=5050)=\phi(-0.9902)-\Phi(-1.0102)\\
+        \Rightarrow&P(S_n=5050)=0.1611-0.1562=0.0049\\
+    \end{split}
+\end{equation*}
+\end{document}
