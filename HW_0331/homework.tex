@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &P(4\text{ of a kind})=\frac{13\times 48}{\binom{52}{4}}\\
+        \Rightarrow&P(4\text{ of a kind})\approx 0.00024\\
+        &p=0.00024\\
+        \Rightarrow&\lambda =np=10000\times 0.00024=2.4\\
+        &P(X=x)=\frac{e^{-\lambda }\lambda ^x}{x!}\\
+        \Rightarrow&P(X\leqslant 2)=P(X=0)+P(X=1)+P(X=2)\\
+        &P(X\leqslant2)=\frac{e^{-2.4 }2.4 ^0}{0!}+\frac{e^{-2.4 }2.4 ^1}{1!}+\frac{e^{-2.4 }2.4 ^2}{2!}\\
+        \Rightarrow&P(X\leqslant2)=0.569709
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &p_X=0.1\\
+        &n=400\\
+        \Rightarrow&\mu_X=np=40\\
+        &\sigma_X=\sqrt{np_X(1-p_X)}=6\\
+        &\text{Use normal distribution}\\
+        &P(X\geqslant 48)\\
+        =&P(X\geqslant 48-0.5)\\
+        =&P(\frac{X-\mu_X}{\sigma_X}\geqslant\frac{47.5-40}{6})\\
+        =&P(z\geqslant1.25)\\
+        =&1-P(z<1.25)\\
+        =&1-0.8944\\
+        =&0.1056\\
+        &p_Y=0.0025\\
+        \Rightarrow&\mu_Y=1\\
+        &\text{Use Poisson distribution}\\
+        &P(Y\geqslant 2)\\
+        =&1-(P(Y=0)+P(Y=1))\\
+        =&1-(\frac{e^{-1}\times 1^0}{0!}+\frac{e^{-1}\times 1^1}{1!})\\
+        =&1-(0.36788+0.36788)\\
+        =&0.2642\\
+    \end{split}
+\end{equation*}
+\end{document}
