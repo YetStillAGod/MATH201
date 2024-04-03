@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{gensymb}
+
+\begin{document}
+\section*{Question 1}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &P(X=Y)\\
+        =&\sum_{1\leqslant k<n}P(X=k,Y=n)\\
+        =&\sum_{n=1}^{\infty}\sum_{k=1}^{n-1}p(1-p)^{k-1}q(1-q)^{n-1}\\
+        =&pq\sum_{n=1}^{\infty}\frac{1-(1-p)^{n-1}}{1-(1-p)}(1-q)^{n-1}\\
+        =&q\sum_{n=1}^{\infty}(1-(1-p)^{n-1})(1-q)^{n-1}\\
+        =&q\sum_{n=1}^{\infty}(1-q)^{n-1}-q\sum_{n=1}^{\infty}(1-p)^{n-1}(1-q)^{n-1}\\
+        =&1-\frac{q}{1-(1-p)(1-q)}\\
+        =&1-\frac{q}{p+q-pq}\\
+        =&\frac{p-pq}{p+q-pq}
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\int_{0}^{1}\int_{y}^{2-y}3(2-x)ydxdy\\
+        =&\int_{0}^{1}3y(2-2y)dy\\
+        =&1\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        f_X=&\int_{-\infty}^{\infty}3(2-x)ydy\\
+        &0<x\leqslant1\\
+        =&\int_{0}^{x}3(2-x)ydy\\
+        =&\int_{0}^{x}6y-3xydy\\
+        =&-frac{3}{2}x^3+3x^2\\
+        &1<x\leqslant2\\
+        =&\int_{0}^{2-x}3(2-x)ydy\\
+        =&\int_{0}^{2-x}6y-2xydy\\
+        =&-\frac{3}{2}(x-2)^3\\
+        f_Y=&\int_{-\infty}^{\infty}3(2-x)ydx\\
+        =&\int_{y}^{2-y}3(2-x)ydx\\
+        =&\int_{y}^{2-y}6y-6xydx\\
+        =&6y-6y^2\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &E[XY]\\
+        =&\int_{0}^{1}\int_{y}^{2-y}xy3(2-x)ydxdy\\
+        =&\int_{0}^{1}\int_{y}^{2-y}6xy-3x^2y^2dxdy\\
+        =&\int_{0}^{1}2y^5-6y^4+4y^2dy\\
+        =&\frac{7}{15}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &P(x+y\leqslant1)\\
+        =&\int_{0}^{\frac{1}{2}}\int_{y}^{1-y}xy3(2-x)ydxdy\\
+        =&3\int_{0}^{\frac{1}{2}}\frac{3}{2}(1-y)ydy\\
+        =&\frac{3}{16}\\
+    \end{split}
+\end{equation*}
+\end{document}
