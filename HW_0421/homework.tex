@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\begin{align*}
+    &P(X_i=1)=\frac{17}{40}\\
+    &P(X_i=0)=\frac{23}{40}\\
+    &E[X_i]=\frac{17}{40}\times1+\frac{23}{40}\times 0=\frac{17}{40}\\
+    &\mu=E[X]=15\times E[X_i]=\frac{51}{8}\\
+    &\sigma^2=15P(X_i=1)P(X_i=0)\\
+    \Rightarrow&\sigma^2=15\times\frac{17}{40}\times\frac{23}{40}=\frac{1173}{320}\\
+\end{align*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{align*}
+    &x+y=6\\
+    &y=-x+6\\
+    \Rightarrow&\text{Cov}(X,Y)\\
+    =&\text{Cov}(X,6-X)\\
+    =&\text{Cov}(X,X)\\
+    =&-E[X^2]+E[X]^2\\
+    E[X]=&\sum_{x=1}^{5}xP_X(X=x)\\
+    =&1\times\frac{\binom{6}{1}\binom{4}{4}}{\binom{10}{5}}+2\times\frac{\binom{6}{2}\binom{4}{3}}{\binom{10}{5}}+3\times\frac{\binom{6}{3}\binom{4}{1}}{\binom{10}{5}}+4\times\frac{\binom{6}{4}\binom{4}{1}}{\binom{10}{5}}+5\times\frac{\binom{6}{5}\binom{4}{0}}{\binom{10}{5}}\\
+    =&3\\
+    E[X^2]=&x^2P_X(X=x)\\
+    =&\frac{29}{3}\\
+    \Rightarrow&(X,Y)=-\frac{29}{3}+3^2=-\frac{2}{3}\\
+\end{align*}
+\end{document}
