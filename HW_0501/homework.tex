@@ -1,0 +1,133 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{align*}
+    &M_X(t)\\
+    =&E[e^{tx}]\\
+    =&\sum_{x=0}^{n}e^{tx}\binom{n}{x}p^x(1-p)^{n-x}\\
+    =&\sum_{x=0}^{n}(pe^t)^x\binom{n}{x}(1-p)^{n-x}\\
+    =&(1-p+pe^t)^n\\
+\end{align*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{align*}
+    {M_X}'(t)&=\frac{d}{dt}(1-p+pe^t)^n=n(1-p+pe^t)^{n-1}pe^t\\
+    {M_X}''(t)&=\frac{d}{dt}n(1-p+pe^t)^{n-1}pe^t=(pe^{t})^2n(n-1)(1-p+pe^t)^{n-2}+pe^tn(1-p+pe^t)^{n-1}\\
+    {M_X}'''(t)&=\frac{d}{dt}((pe^{t})^2n(n-1)(1-p+pe^t)^{n-2}+pe^tn(1-p+pe^t)^{n-1})\\
+    &=(pe^t)^3n(n-1)(n-2)(1-p+pe^t)^{n-3}+3(pe^t)^2n(n-1)(1-p+pe^t)^{n-2}+pe^tn(1-p+pe^t)^{n-1}\\
+    E[X^3]&={M_X}'''(0)=np+3(n-1)np^2+n(n-1)(n-2)p^3\\
+\end{align*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{align*}
+    &{Z_i}^2\sim {\chi_{(1)}}^2\\
+    &Z_i\text{ are independent}\\
+    \Rightarrow&Y=\sum_{i=1}^{n}{Z_i}^2\sim{\chi_{(n)}}^2\\
+    \Rightarrow&\overline{Y}=n\\
+    &\sigma^2=2n\\
+\end{align*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{align*}
+    M_Y(t)&=E[e^{tY}]\\
+    &=E[e^{t({Z_1}^2+{Z_2}^2+...+{Z_n}^2)}]\\
+    &=E[\Pi^{n}_{i=1}e^{t{Z_i}^2}]\\
+    &=\Pi^{n}_{i=1}E[e^{t{Z_i}^2}]\\
+    &=\Pi^{n}_{i=1}M_{{Z_i}^2}(t)\\
+    &=(1-2t)^{-\frac{n}{2}},t<\frac{1}{2}\\
+\end{align*}
+
+~
+
+\subsection*{problem c}
+
+~
+
+\begin{align*}
+    E[Y^3]&={M_Y}'''(0)\\
+    &=\frac{d^3}{dt^3}(1-2t)^{-\frac{n}{2}}|_{t=0}\\
+    &=4n(-\frac{1}{2}n-1)(-\frac{1}{2}n-2)(1-2t)^{-\frac{1}{2}n-3}|_{t=0}\\
+    &=n^3+6n^2+8n\\
+\end{align*}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{align*}
+    &P(x>15)\leqslant \frac{E[X]}{15}\\
+    &P(x>15)\leqslant\frac{12}{15}=\frac{2}{3}\\
+    \Rightarrow&P(x>15)\leqslant\frac{2}{3}\\
+\end{align*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{align*}
+    &P(x>15)=P(x-10>5)\\
+    &P(x-10>\frac{5}{\sqrt{3}}\times \sqrt{3})\leqslant\frac{1}{(\frac{5}{\sqrt{3}}^2)}=\frac{3}{25}\\
+    \Rightarrow&P(x>15)\leqslant\frac{3}{25}\\
+\end{align*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{align*}
+    &\sum_{i=1}^{300}Y_i\sim N(10\times 300,3\times 300)\\
+    &\sigma=\sqrt{900}=30\\
+    &P(\sum_{i=1}^{300}Y_i>3030)=P(z>\frac{3030-3000}{30})=P(z>1)\\
+    &P(z>1)=1-P(z\leqslant1)=1-0.84134=0.15866\\
+    \Rightarrow&P(\sum_{i=1}^{300}Y_i>3030)=0.15866\\
+\end{align*}
+\end{document}
